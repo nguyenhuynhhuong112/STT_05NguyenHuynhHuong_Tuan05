@@ -25,6 +25,7 @@ export const Body = () => {
   };
   const handleButton4Press = () => {
     setImageSource(require("../../../../assets/vs_blue.png"));
+    setSelectedColor('blue')
     console.log("image ", imageSource)
   };
   const handleDoneButtonPress = () => {
@@ -38,8 +39,9 @@ export const Body = () => {
       case 'black':
         navigation.navigate('Screen04' as never);
         break;
-      default:
+      case 'blue':
         navigation.navigate('Screen01' as never);
+      default:
         break;
     }
   };
